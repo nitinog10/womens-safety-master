@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/detailscreenartboard"
+    tools:context=".GetDetailsActivity">
+
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/opensanssemibold"
+        android:text="Safety Mate"
+        android:textColor="#FFF"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/tv_subheading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_heading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Fill the below information to continue"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="351dp"
+        android:layout_height="484dp"
+        android:layout_below="@id/tv_subheading"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="30dp"
+        android:background="#FFF"
+        android:elevation="400dp"
+        app:cardCornerRadius="50dp">
+
+        <RelativeLayout
+            android:layout_width="347dp"
+            android:layout_height="484dp">
+
+
+            <TextView
+                android:id="@+id/tv_card_view_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:text="My Details"
+                android:textColor="#000"
+                android:textSize="35sp" />
+
+            <EditText
+                android:id="@+id/et_your_name_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_card_view_heading"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="@string/your_name" />
+
+            <EditText
+                android:id="@+id/et_mobile_number_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_your_name_edit"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="@string/emergency_mobile_number_to_send_message_to" />
+
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_mobile_number_edit"
+                android:background="@drawable/cardviewbacground"
+                android:text="Update"
+                android:textColor="#FFF"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                />
+
+            <Button
+                android:id="@+id/btnback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/updateButton"
+                android:background="@drawable/background_btn_cancle"
+                android:text="Cancel"
+                android:textColor="#FFF"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

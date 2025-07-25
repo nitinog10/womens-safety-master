@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_intro_page"
+    >
+
+    <TextView
+        android:id="@+id/text_view_intro_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You can Click on police to turn on the siren"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="32sp"
+        android:fontFamily="@font/opensanssemibold"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/policsillustration"
+        android:layout_below="@id/text_view_intro_header"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
+
+</RelativeLayout>

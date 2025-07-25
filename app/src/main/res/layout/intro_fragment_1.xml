@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_intro_page"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/text_view_intro_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Someone following just shake the device to send message"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="32sp"
+        android:fontFamily="@font/opensanssemibold"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/image_view_phone_shaking"
+        android:layout_width="match_parent"
+        android:layout_height="404dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/text_view_intro_header"
+        android:src="@drawable/phoneshakingimage"
+        />
+
+
+</RelativeLayout>
