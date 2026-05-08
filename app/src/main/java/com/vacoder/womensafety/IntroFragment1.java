@@ -1,3 +1,4 @@
+```java
 package com.vacoder.womensafety;
 
 import android.os.Bundle;
@@ -17,3 +18,4 @@ public class IntroFragment1 extends Fragment {
         return inflater.inflate(R.layout.intro_fragment_1, container, false);
     }
 }
+```
