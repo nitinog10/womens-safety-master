@@ -54,3 +54,8 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 ## License
 
 MIT
+
+## Code Improvements Applied
+
+- Extracted shared utility code into a dedicated module to lower coupling.
+- Re-indexed and regenerated walkthroughs/diagrams after structural changes to keep documentation current.
