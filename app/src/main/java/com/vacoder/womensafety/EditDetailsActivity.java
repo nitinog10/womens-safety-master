@@ -1,3 +1,4 @@
+```java
 package com.vacoder.womensafety;
 
 import androidx.appcompat.app.AlertDialog;
@@ -18,7 +19,7 @@ import static com.vacoder.womensafety.MainActivity.USER_NAME;
 
 public class EditDetailsActivity extends AppCompatActivity {
 
-    private EditText name,number;
+    private EditText name, number;
     private Button updateBtn, cancel;
 
     @Override
@@ -40,7 +41,7 @@ public class EditDetailsActivity extends AppCompatActivity {
         updateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (name.getText().toString().trim().equals("") && number.getText().toString().trim().equals("")){
+                if (name.getText().toString().trim().isEmpty() && number.getText().toString().trim().isEmpty()) {
                     Toast.makeText(EditDetailsActivity.this, "Please Enter Correct Details", Toast.LENGTH_SHORT).show();
                 } else {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -61,16 +62,12 @@ public class EditDetailsActivity extends AppCompatActivity {
                 confirmDialog();
             }
         });
-
-
     }
 
-
-
-    void confirmDialog(){
+    void confirmDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Warning !!");
-        builder.setMessage("Are you sure exit editing?");
+        builder.setTitle("Warning!!");
+        builder.setMessage("Are you sure you want to exit editing?");
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -80,10 +77,10 @@ public class EditDetailsActivity extends AppCompatActivity {
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
+                // Do nothing
             }
         });
         builder.create().show();
     }
-
 }
+```
