@@ -1,3 +1,4 @@
+```java
 package com.vacoder.womensafety;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +11,7 @@ import android.widget.Button;
 
 public class IntroActivity extends AppCompatActivity {
 
-    private int intro_number = 1;
+    private int introNumber = 1;
     private Button nextBtn;
 
     @Override
@@ -19,33 +20,32 @@ public class IntroActivity extends AppCompatActivity {
         setContentView(R.layout.intro_activity_container);
 
         getSupportActionBar().hide();
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new IntroFragment1()).commit();
-
-        intro_number ++;
+        loadFragment(new IntroFragment1());
 
         nextBtn = findViewById(R.id.btnNext);
-
     }
 
-    public void shownextScreen(View view) {
-
-        if (intro_number == 2) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new IntroFragment2()).commit();
+    public void showNextScreen(View view) {
+        if (introNumber == 1) {
+            loadFragment(new IntroFragment2());
             nextBtn.setText("Let's Go");
-            intro_number++;
-
+            introNumber++;
         } else {
             finish();
         }
     }
 
+    private void loadFragment(IntroFragment fragment) {
+        getSupportFragmentManager().beginTransaction()
+               .replace(R.id.fragment_container, fragment)
+                .commit();
+    }
+
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
         finishAffinity();
     }
 }
+```
