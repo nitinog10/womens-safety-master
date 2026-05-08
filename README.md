@@ -1,22 +1,20 @@
-# nitinog10/womens-safety-master
+# Women's Safety Master
 
-An Android application designed to enhance women's safety through location tracking and emergency alerts.
+An Android application designed to enhance personal safety for women by storing and retrieving critical safety information and providing GPS tracking in emergencies.
 
 ## About
-
-This project aims to provide a safety mechanism for users, particularly women, in potentially unsafe environments. It offers essential features to ensure quick access to help when needed.
+This app allows users to input and access their personal safety details quickly. It includes essential features like GPS tracking to help in emergency situations, making it a vital tool for women's safety.
 
 ## Features
-
-- Real-time location tracking
-- Emergency alert notifications
-- User profile management
-- Introductory screens for user onboarding
-- Customizable UI with various drawable resources
-- Code obfuscation for enhanced security
+- Input and retrieve personal safety details
+- GPS tracking for emergency situations
+- User-friendly interface with intuitive navigation
+- Secure storage of sensitive information
+- Introduction screens to guide new users
+- Edit details functionality for updates
+- Panic alert feature for immediate assistance
 
 ## Tech Stack
-
 - Java
 - XML
 - Gradle
@@ -24,38 +22,27 @@ This project aims to provide a safety mechanism for users, particularly women, i
 ## Getting Started
 
 ### Prerequisites
-
-- Android Studio
-- Java Development Kit (JDK)
+- Android Studio installed
+- Basic knowledge of Java and Android development
 
 ### Installation
-
 1. Clone the repository:
-   ```sh
-   git clone https://github.com/nitinog10/womens-safety-master.git
-   ```
+    ```bash
+    git clone https://github.com/nitinog10/womens-safety-master.git
+    ```
 2. Open the project in Android Studio.
 3. Sync the project with Gradle files.
 
 ### Running the App
-
 1. Connect an Android device or start an emulator.
-2. Click the "Run" button in Android Studio.
+2. Run the app from Android Studio.
 
 ## Project Structure
-
-- `/`: Project root containing configuration files and build scripts.
-- `/app`: Main application module with source code, resources, and build configuration.
+- `/`: Project root containing configuration files and scripts.
+- `/app`: Main application code, including activities, resources, and build scripts.
 
 ## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request.
+Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
 
 ## License
-
 MIT
-
-## Code Improvements Applied
-
-- Extracted shared utility code into a dedicated module to lower coupling.
-- Re-indexed and regenerated walkthroughs/diagrams after structural changes to keep documentation current.
