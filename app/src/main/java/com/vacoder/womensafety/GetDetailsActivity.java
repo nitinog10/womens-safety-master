@@ -11,6 +11,8 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.vacoder.womensafety.utils.SharedPreferencesUtil;
+
 import static com.vacoder.womensafety.MainActivity.MOBILE_NUMBER;
 import static com.vacoder.womensafety.MainActivity.USER_DETAILS;
 import static com.vacoder.womensafety.MainActivity.USER_NAME;
@@ -51,7 +53,27 @@ public class GetDetailsActivity extends AppCompatActivity {
     }
 
     private void saveUserDetails(String name, String mobileNumber) {
-        SharedPreferences sharedPreferences = getSharedPreferences(USER_DETAILS, MODE_PRIVATE);
+        SharedPreferencesUtil.saveUserDetails(this, name, mobileNumber);
+    }
+}
+```
+
+```java
+// File: app/src/main/java/com/vacoder/womensafety/utils/SharedPreferencesUtil.java
+
+package com.vacoder.womensafety.utils;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+
+import static com.vacoder.womensafety.MainActivity.MOBILE_NUMBER;
+import static com.vacoder.womensafety.MainActivity.USER_DETAILS;
+import static com.vacoder.womensafety.MainActivity.USER_NAME;
+
+public class SharedPreferencesUtil {
+
+    public static void saveUserDetails(Context context, String name, String mobileNumber) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(USER_DETAILS, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(USER_NAME, name);
         editor.putString(MOBILE_NUMBER, mobileNumber);
