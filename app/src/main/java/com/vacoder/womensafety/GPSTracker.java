@@ -2,7 +2,6 @@
 package com.vacoder.womensafety;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.Service;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -40,7 +39,8 @@ public class GpsTracker extends Service implements LocationListener {
             boolean isGPSEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
             boolean isNetworkEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 
-            if (!isGPSEnabled &&!isNetworkEnabled) {
+            if (!isGPSEnabled && !isNetworkEnabled) {
+                showSettingsAlert();
                 return null;
             }
 
@@ -62,7 +62,7 @@ public class GpsTracker extends Service implements LocationListener {
                 }
             }
 
-        } catch (Exception e) {
+        } catch (SecurityException e) {
             e.printStackTrace();
         }
 
@@ -92,7 +92,7 @@ public class GpsTracker extends Service implements LocationListener {
 
     public void showSettingsAlert() {
         new AlertDialog.Builder(mContext)
-                .setTitle("GPS is settings")
+                .setTitle("GPS Settings")
                .setMessage("GPS is not enabled. Do you want to go to settings menu?")
                .setPositiveButton("Settings", (dialog, which) -> mContext.startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)))
                .setNegativeButton("Cancel", (dialog, which) -> dialog.cancel())
